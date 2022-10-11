@@ -1,4 +1,4 @@
-export default {
+export default  {
     id: 'movie1',
     title: 'Suits',
     year: 2019,

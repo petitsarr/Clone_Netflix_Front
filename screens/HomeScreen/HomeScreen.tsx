@@ -12,7 +12,8 @@ const HomeScreen = () => {
          <FlatList  
           data= {categories.items} 
           renderItem = {({item}) => <Homecategory category = {item} /> } 
-          keyExtractor = {(item) => item.id}
+          keyExtractor = {(item) => item.id} 
+          showsVerticalScrollIndicator = {false}
          />
    </View>
   );

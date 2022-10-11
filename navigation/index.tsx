@@ -20,6 +20,7 @@ import  HomeScreen from '../screens/HomeScreen/HomeScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import MovieDetailsScreen from '../screens/MovieDetailsScreen/MovieDetailsScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -39,8 +40,10 @@ const HomeStack = createNativeStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={ HomeScreen} options={{ headerShown: false }} />
+    <HomeStack.Navigator> 
+       <HomeStack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen} options={{ headerShown: false }} />
+      <HomeStack.Screen name="Home" component={ HomeScreen} options={{ headerShown: false }} /> 
+     
       <HomeStack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       
     </HomeStack.Navigator>

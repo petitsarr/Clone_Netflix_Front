@@ -29,7 +29,8 @@ const Homecategory = ({category} : HomeCategoryProps ) => {
                     
                     } } 
                     keyExtractor = {(item) => item.id} 
-                    horizontal = {true} 
+                    horizontal = {true}  
+                    showsHorizontalScrollIndicator = {false}
                     
 
                     />
