@@ -9,8 +9,9 @@ const styles = StyleSheet.create({
 
     }  ,
     title: { 
-        fontSize: 24, 
-        fontWeight: 'bold', 
+        fontSize: 18, 
+        fontWeight: 'bold',  
+        color : 'white',
         
     } ,
     match: { 
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
         justifyContent :"center" , 
         alignItems :"center" , 
         borderRadius : 4 , 
-        marginVertical : 2 , 
+        marginTop : 25 , 
         padding : 5 ,
     } , 
     playbuttonText :{
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
         justifyContent :"center" , 
         alignItems :"center" , 
         borderRadius : 4 , 
-        marginVertical : 2, 
+        marginTop : 25 , 
         padding : 5 ,
     } ,
     downloadText :{
@@ -67,18 +68,20 @@ const styles = StyleSheet.create({
     } ,
     plot :{
         color :"white" , 
-        marginVertical : 2 ,
+        marginTop : 30,
     } ,
     cast :{ 
-        color :"white" ,
+        color :"white" , 
+        marginTop : 10 ,
      } ,
      creator :{ 
-        color :"white" ,
+        color :"white" , 
+        marginTop : 10 ,
      } ,
      buttonContainer :{
             flexDirection :"row" , 
             justifyContent :'space-around'  ,
-            marginTop : 5 ,
+            marginTop : 25 ,
      } ,
      
     

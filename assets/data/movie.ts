@@ -27,10 +27,12 @@ export default  {
                     duration: '43m',
                     plot: 'An open-and-shut case becomes anything but when Harvey is accused of an inappropriate dalliance with a married woman.',
                     video: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-                }]
+                } ,
+                
+            ]
             }
         }, {
-            id: 'season2',
+            id: 'season2',  
             name: 'Season 2',
             episodes: {
                 items: [{
