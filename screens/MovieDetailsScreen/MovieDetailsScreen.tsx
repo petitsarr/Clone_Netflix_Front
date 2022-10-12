@@ -6,27 +6,27 @@ import movie from "../../assets/data/movie"
 import { Entypo } from '@expo/vector-icons';    
 import {Picker} from "@react-native-picker/picker"
 import EpisodeItem from '../../components/EpisodeItem/EpisodeItem';
-
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
 
 
 const MovieDetailsScreen = () => {    
   
 
   const [selectedLanguage, setSelectedLanguage] = useState(0);   
-
-const firstsason = movie.seasons.items[selectedLanguage]
-const firstEpisode = movie.seasons.items[0].episodes.items[0]  
+  const [currentEpisode, setCurrentEpisode] = useState(movie.seasons.items[0].episodes.items[0]);
+    const firstsason = movie.seasons.items[selectedLanguage]
+    const firstEpisode = movie.seasons.items[0].episodes.items[0]  
 
 const seasonName = movie.seasons.items.map(season => season.name) 
-console.log(seasonName) 
-console.log(selectedLanguage)
+//console.log(seasonName) 
+//console.log(selectedLanguage)
 
 //console.log(selectedLanguage)
 
   return (
     <View>
       
-      <Image style ={styles.image} source={{uri :  firstEpisode.poster }} />  
+      <VideoPlayer episodes={currentEpisode} /> 
       
      <FlatList   
         data = {firstsason.episodes.items} 
