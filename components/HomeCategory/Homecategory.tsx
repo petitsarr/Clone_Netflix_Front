@@ -1,7 +1,8 @@
 import styles from './styles';
-import { Text, View , Image ,FlatList } from 'react-native';
+import { Text, View , Image ,FlatList  ,Pressable} from 'react-native';
 import { RootTabScreenProps } from '../../types'; 
-import categories from '../../assets/data/categories'; 
+import categories from '../../assets/data/categories';  
+import {useNavigation} from "@react-navigation/native"
 
 interface HomeCategoryProps {  
     category: {
@@ -17,7 +18,11 @@ interface HomeCategoryProps {
 
 const Homecategory = ({category} : HomeCategoryProps ) => { 
 
-  
+  const navigation = useNavigation();  
+
+     const onMoviePress = (movie  :string) =>{
+           navigation.navigate('MovieDetailsScreen' , {id : movie})
+       }
   return (
      
     <> 
@@ -25,7 +30,11 @@ const Homecategory = ({category} : HomeCategoryProps ) => {
                     <FlatList  
                     data= {category.movies}  
                     renderItem = {({item}) => {
-                    return <Image source={{uri : item.poster}} style ={styles.image}/>  
+                    return (
+                      <Pressable onPress={()=> onMoviePress(item.id) } > 
+                        <Image source={{uri : item.poster}} style ={styles.image}/> 
+                      </Pressable>
+                    ) 
                     
                     } } 
                     keyExtractor = {(item) => item.id} 

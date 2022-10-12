@@ -41,9 +41,8 @@ const HomeStack = createNativeStackNavigator<RootStackParamList>();
 function RootNavigator() {
   return (
     <HomeStack.Navigator> 
-       <HomeStack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen} options={{ headerShown: false }} />
       <HomeStack.Screen name="Home" component={ HomeScreen} options={{ headerShown: false }} /> 
-     
+      <HomeStack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen} options={{ headerShown: true ,  headerTintColor: "white"  }} />
       <HomeStack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
       
     </HomeStack.Navigator>

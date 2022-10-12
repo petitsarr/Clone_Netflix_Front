@@ -15,7 +15,9 @@ declare global {
 
 export type RootStackParamList = {
   Home:  undefined; 
-  MovieDetailsScreen:  undefined;
+  MovieDetailsScreen:  {
+    id :string
+  };
  // Modal: undefined;
   NotFound: undefined;
 };
