@@ -35,7 +35,7 @@ const EpisodeItem = ({episodes} : EpisodeItemProps) => {
                             <Text style = {styles.duration} > {episodes.duration} </Text>
 
                  </View> 
-              <AntDesign  name="download" size={20} color ="white" style ={{marginTop :5 , marginLeft :85}} />
+              <AntDesign  name="download" size={20} color ="white" style ={{marginTop :5 , marginLeft :10}} />
 
             </View> 
         <Text style ={styles.plot}> {episodes.plot} </Text> 
